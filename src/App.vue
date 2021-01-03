@@ -1,6 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">
+          <router-link to="/prijava">Prijava</router-link>
+          <!-- iskreno nemam pojma što ovdje radim jer ne znam kako napravit buttone bez navbara, al barem su se pojavili, moram još maknuti sad taj donji dio -->
+        </button>
+        <button class="btn btn-primary" type="button">
+          <router-link to="/Registracija">Registracija</router-link>
+        </button>
+      </div>
       <router-link to="/">Home</router-link>
       |
       <router-link to="/prijava">Prijava</router-link>
@@ -11,6 +20,8 @@
     <router-view />
   </div>
 </template>
+
+<!-- treba srediti stranicu, obrisati onaj dio jer mi nemamo navbar na glavnoj stranici i dodati kao što smo u Figmi radili-->
 
 <style lang="scss">
 #app {
