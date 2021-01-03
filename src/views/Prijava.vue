@@ -1,15 +1,10 @@
 <template>
   <div class="vue-tempalte">
     <form>
-      <h3>Registriraj se!</h3>
+      <h3>Postojeći si korisnik? Prijavi se!</h3>
 
       <div class="form-group">
-        <label>Ime i prezime</label>
-        <input type="text" class="form-control form-control-lg" />
-      </div>
-
-      <div class="form-group">
-        <label>E-amil adresa</label>
+        <label>E-mail adresa</label>
         <input type="email" class="form-control form-control-lg" />
       </div>
 
@@ -19,13 +14,8 @@
       </div>
 
       <button type="submit" class="btn btn-dark btn-lg btn-block">
-        Registriraj se!
+        Prijavi se!
       </button>
-
-      <p class="forgot-password text-right">
-        Already registered
-        <router-link :to="{ name: 'login' }">sign in?</router-link>
-      </p>
     </form>
   </div>
 </template>
