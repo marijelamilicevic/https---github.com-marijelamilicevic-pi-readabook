@@ -41,11 +41,10 @@
   </div>
 </template>
 <script>
-import { firebase } from "@/firebase";
+import firebase from "@/firebase";
 
 export default {
   name: "Registracija",
-
   data() {
     return {
       imeiprezime: "",
@@ -58,12 +57,12 @@ export default {
     registracija() {
       firebase
         .auth()
-        .createUserWithEmailAndPassword(this.email, this.lozinka)
+        .createUserWithEmailAndPassword(this.username, this.password)
         .then(function () {
           console.log("Uspješna registracija!");
         })
         .catch(function (error) {
-          console.error("Došlo je do greške", error);
+          console.error("Došlo je do greške!", error);
         });
       console.log("Nastavak");
     },
