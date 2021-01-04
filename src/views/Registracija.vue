@@ -5,35 +5,68 @@
 
       <div class="form-group">
         <label>Ime i prezime</label>
-        <input type="text" class="form-control form-control-lg" />
+        <input
+          type="text"
+          v-model="imeiprezime"
+          class="form-control form-control-lg"
+        />
       </div>
 
       <div class="form-group">
-        <label>E-amil adresa</label>
-        <input type="email" class="form-control form-control-lg" />
+        <label>E-mail adresa</label>
+        <input
+          type="email"
+          v-model="email"
+          class="form-control form-control-lg"
+        />
       </div>
 
       <div class="form-group">
         <label>Lozinka</label>
-        <input type="password" class="form-control form-control-lg" />
+        <input
+          type="password"
+          v-model="lozinka"
+          class="form-control form-control-lg"
+        />
       </div>
 
-      <button type="submit" class="btn btn-dark btn-lg btn-block">
+      <button
+        type="botton"
+        @click="registracija"
+        class="btn btn-dark btn-lg btn-block"
+      >
         Registriraj se!
       </button>
-
-      <p class="forgot-password text-right">
-        Already registered
-        <router-link :to="{ name: 'login' }">sign in?</router-link>
-      </p>
     </form>
   </div>
 </template>
-
 <script>
+import { firebase } from "@/firebase";
+
 export default {
+  name: "Registracija",
+
   data() {
-    return {};
+    return {
+      imeiprezime: "",
+      email: "",
+      lozinka: "",
+    };
+  },
+
+  methods: {
+    registracija() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.email, this.lozinka)
+        .then(function () {
+          console.log("Uspješna registracija!");
+        })
+        .catch(function (error) {
+          console.error("Došlo je do greške", error);
+        });
+      console.log("Nastavak");
+    },
   },
 };
 </script>
