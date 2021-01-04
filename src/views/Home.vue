@@ -21,7 +21,9 @@
   </div>
 </template>
 
-<!-- treba srediti stranicu, obrisati onaj dio jer mi nemamo navbar na glavnoj stranici i dodati kao što smo u Figmi radili-->
+<!-- treba srediti stranicu, obrisati onaj dio jer mi nemamo navbar na glavnoj stranici i dodati kao što smo u Figmi radili
+btw trebali bi def ovo malo ubrzat, znam da imate mali milijun obveza i ja ih imam, 
+al dajte bar za potpis da nešto snapravimo pa ćemo do 9. mjeseca obranit taj projekt!!! -->
 
 <style lang="scss">
 #app {

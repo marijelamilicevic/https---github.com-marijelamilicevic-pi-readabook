@@ -53,6 +53,11 @@ export default {
     };
   },
 
+  //ovaj dio nešto ne radi pa dajte samo pogledajte vi video Vue.JS #4 pt.1 radila sam po njemu, i ne kužim u čemu je caka
+  //eventualno što mi pada na pamet je ovaj dio sa this.username jer je kod nas this.imeiprezime, ali radila sam kao prof i onaj dio u dokumentaciji je isto tako prikazan
+  // + kad sve to pokrenem na netu mi izbaci grešku tipa TypeError: _firebase__WEBPACK_IMPORTED_MODULE_0__.default.auth is not a function ???
+  // i samim time niti na Firebasu mi ne prikazuje u Userima ništa... tak da, ako znate i vidite što ja ne vidim, pls hahha
+
   methods: {
     registracija() {
       firebase
