@@ -1,49 +1,110 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button">
-          <router-link to="/prijava">Prijava</router-link>
-          <!-- iskreno nemam pojma što ovdje radim jer ne znam kako napravit buttone bez navbara, al barem su se pojavili, moram još maknuti sad taj donji dio -->
-        </button>
-        <button class="btn btn-primary" type="button">
-          <router-link to="/Registracija">Registracija</router-link>
-        </button>
+  <div class="home">
+    <div>
+      <div>
+        <div class="tekst">
+          <router-link to="/Postojeći korisnik"
+            ><button class="btn btn primary">
+              <strong>Postojeći korisnik</strong>
+            </button></router-link
+          >
+          <router-link to="/Novi korisnik"
+            ><button class="btn btn primary">
+              <strong>Novi korisnik</strong>
+            </button></router-link
+          >
+        </div>
       </div>
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/prijava">Prijava</router-link>
-      |
-      <router-link to="/Registracija">Registracija</router-link>
-      |
     </div>
-    <router-view />
   </div>
 </template>
 
-<!-- treba srediti stranicu, obrisati onaj dio jer mi nemamo navbar na glavnoj stranici i dodati kao što smo u Figmi radili
-btw trebali bi def ovo malo ubrzat, znam da imate mali milijun obveza i ja ih imam, 
-al dajte bar za potpis da nešto snapravimo pa ćemo do 9. mjeseca obranit taj projekt!!! -->
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+// @ is an alias to /src
+export default {
+  name: "Home",
+};
+</script>
+ 
+<style scoped>
+.home {
+  position: relative;
+  width: absolute;
+  height: absolute;
+  background-image: url();
 }
+button {
+  margin: 8%;
+  font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 1.5% 6%;
+  background-color: rgba(234, 202, 122, 1);
+  color: black;
+}
+button:hover {
+  box-shadow: black;
+}
+.tekst {
+  width: 70%;
+  margin: auto;
+}
+.tekst h1 {
+  width: 870px;
+  height: 174px;
+  left: 562px;
+  top: 42px;
 
-#nav {
-  padding: 30px;
+  font-family: Great Vibes;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 180px;
+  line-height: 225px;
+  text-align: center;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  color: #eaca7a;
+}
+.tekst h4 {
+  line-height: 150%;
+}
+.naslovna {
+  width: 100%;
+  align-items: absolute;
+}
+@media (max-width: 600px) {
+  button {
+    margin: 4px;
+    width: 40%;
+    border-radius: 20px;
+    padding: 1% 5%;
+    background-color: rgb(197, 160, 165);
+    font-size: 150%;
+    margin: 5%;
+  }
+  button:hover {
+    box-shadow: 9px 9px 7px gray;
+  }
+  .tekst {
+    width: 80%;
+    margin: auto;
+  }
+  .tekst h1 {
+    margin-bottom: 5%;
+    font-size: 35px;
+    margin-top: 10%;
+  }
+  .tekst h4 {
+    line-height: 150%;
+    font-size: 130%;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .row {
+    margin: auto;
+  }
+
+  .naslovna {
+    width: 100%;
+    align-items: center;
   }
 }
 </style>

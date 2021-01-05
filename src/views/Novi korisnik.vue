@@ -1,7 +1,7 @@
 <template>
   <div class="vue-tempalte">
     <form>
-      <h3>Registriraj se!</h3>
+      <h3>Želiš postati korisnik? Registriraj se!</h3>
 
       <div class="form-group">
         <label>Ime i prezime</label>
@@ -31,8 +31,8 @@
       </div>
 
       <button
-        type="botton"
-        @click="registracija"
+        type="button"
+        @click="novikorisnik"
         class="btn btn-dark btn-lg btn-block"
       >
         Registriraj se!
@@ -40,29 +40,23 @@
     </form>
   </div>
 </template>
+
 <script>
-import firebase from "@/firebase";
+import { firebase } from "@/firebase.js";
 
 export default {
-  name: "Registracija",
-  data() {
+  data: function () {
     return {
       imeiprezime: "",
       email: "",
       lozinka: "",
     };
   },
-
-  //ovaj dio nešto ne radi pa dajte samo pogledajte vi video Vue.JS #4 pt.1 radila sam po njemu, i ne kužim u čemu je caka
-  //eventualno što mi pada na pamet je ovaj dio sa this.username jer je kod nas this.imeiprezime, ali radila sam kao prof i onaj dio u dokumentaciji je isto tako prikazan
-  // + kad sve to pokrenem na netu mi izbaci grešku tipa TypeError: _firebase__WEBPACK_IMPORTED_MODULE_0__.default.auth is not a function ???
-  // i samim time niti na Firebasu mi ne prikazuje u Userima ništa... tak da, ako znate i vidite što ja ne vidim, pls hahha
-
   methods: {
-    registracija() {
+    novikorisnik: function () {
       firebase
         .auth()
-        .createUserWithEmailAndPassword(this.username, this.password)
+        .createUserWithEmailAndPassword(this.email, this.lozinka)
         .then(function () {
           console.log("Uspješna registracija!");
         })
@@ -73,4 +67,4 @@ export default {
     },
   },
 };
-</script>
+</script> 

@@ -11,20 +11,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/prijava',
-    name: 'Prijava',
+    path: '/Postojeći korisnik',
+    name: 'Postojeći korisnik',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Prijava.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Postojeći korisnik.vue')
   },
   {
-    path: '/registracija',
-    name: 'Registracija',
+    path: '/Novi korisnik',
+    name: 'Novi korisnik',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Registracija.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Novi korisnik.vue')
   },
 ]
 
