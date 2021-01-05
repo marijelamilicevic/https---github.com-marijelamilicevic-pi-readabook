@@ -82,6 +82,8 @@ Zaduženja (planirano) po članovima tima:
 
         - testiranje
 
+        - provjera
+
 # pi-readabook
 
 ## Project setup
