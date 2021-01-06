@@ -26,6 +26,22 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Novi korisnik.vue')
   },
+  {
+    path: '/Glavni pregled',
+    name: 'Glavni pregled',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Glavnipregled.vue')
+  },
+  {
+    path: '/Dodaj novu knjigu',
+    name: 'Dodaj novu knjigu',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Dodavanjenoveknjige.vue')
+  },
 ]
 
 const router = new VueRouter({

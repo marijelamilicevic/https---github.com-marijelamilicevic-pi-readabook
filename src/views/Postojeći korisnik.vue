@@ -5,15 +5,29 @@
 
       <div class="form-group">
         <label>E-mail adresa</label>
-        <input type="email" class="form-control form-control-lg" />
+        <input
+          type="email"
+          v-model="email"
+          class="form-control form-control-lg"
+        />
       </div>
 
       <div class="form-group">
         <label>Lozinka</label>
-        <input type="password" class="form-control form-control-lg" />
+        <input
+          type="password"
+          v-model="lozinka"
+          class="form-control form-control-lg"
+        />
       </div>
 
-      <button type="submit" class="btn btn-dark btn-lg btn-block">
+      <!-- //treba dodati još onaj dio tipa Nemaš račun? pa da ga prebaci na Novi korisnik  -->
+
+      <button
+        type="botton"
+        @click="postojecikorisnik"
+        class="btn btn-dark btn-lg btn-block"
+      >
         Prijavi se!
       </button>
     </form>
@@ -21,9 +35,43 @@
 </template>
 
 <script>
+import { firebase } from "@/firebase";
+
 export default {
+  name: "Postojeći korisnik",
   data() {
-    return {};
+    return {
+      email: "",
+      lozinka: "",
+    };
+  },
+
+  methods: {
+    postojecikorisnik() {
+      console.log("postojecikorisnik..." + this.email);
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.lozinka)
+        .then(() => {
+          if (firebase.auth().currentUser.emailVerified) {
+            this.$router.replace({ name: "Home" });
+          } else {
+            console.log("Nisi registriran! Registriraj se.");
+            firebase
+              .auth()
+              .signOut()
+              .then(() => {
+                this.$router.push({ name: "postojecikorisnik" });
+              });
+          }
+        })
+
+        // tu mi nešto nije okay, budem istraživala
+        .catch((e) => {
+          console.error(e.message);
+          this.errorMessage = e.message;
+        });
+    },
   },
 };
-</script>
+</script> 

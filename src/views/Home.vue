@@ -13,6 +13,12 @@
               <strong>Novi korisnik</strong>
             </button></router-link
           >
+          <router-link to="Glavnipregled"
+            ><button class="btn btn primary">
+              <strong>Glavni pregled</strong>
+            </button></router-link
+          >
+          >
         </div>
       </div>
     </div>
@@ -28,10 +34,7 @@ export default {
  
 <style scoped>
 .home {
-  position: relative;
-  width: absolute;
-  height: absolute;
-  background-image: url();
+  font-family: "Times New Roman", "Arial";
 }
 button {
   margin: 8%;
@@ -67,10 +70,6 @@ button:hover {
 .tekst h4 {
   line-height: 150%;
 }
-.naslovna {
-  width: 100%;
-  align-items: absolute;
-}
 @media (max-width: 600px) {
   button {
     margin: 4px;
@@ -100,11 +99,6 @@ button:hover {
 
   .row {
     margin: auto;
-  }
-
-  .naslovna {
-    width: 100%;
-    align-items: center;
   }
 }
 </style>
