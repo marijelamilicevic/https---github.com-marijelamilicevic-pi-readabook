@@ -20,9 +20,6 @@
           class="form-control form-control-lg"
         />
       </div>
-
-      <!-- //treba dodati još onaj dio tipa Nemaš račun? pa da ga prebaci na Novi korisnik  -->
-
       <button
         type="button"
         @click="postojećikorisnik()"
