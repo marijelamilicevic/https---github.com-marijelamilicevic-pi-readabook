@@ -24,8 +24,8 @@
       <!-- //treba dodati još onaj dio tipa Nemaš račun? pa da ga prebaci na Novi korisnik  -->
 
       <button
-        type="botton"
-        @click="postojecikorisnik"
+        type="button"
+        @click="postojećikorisnik()"
         class="btn btn-dark btn-lg btn-block"
       >
         Prijavi se!
@@ -38,40 +38,27 @@
 import { firebase } from "@/firebase";
 
 export default {
-  name: "Postojeći korisnik",
+  name: "postojecikorisnik",
   data() {
     return {
       email: "",
       lozinka: "",
     };
   },
-
   methods: {
-    postojecikorisnik() {
-      console.log("postojecikorisnik..." + this.email);
+    postojećikorisnik() {
+      console.log("postojećikorisnik..." + this.email);
+
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.lozinka)
-        .then(() => {
-          if (firebase.auth().currentUser.emailVerified) {
-            this.$router.replace({ name: "Home" });
-          } else {
-            console.log("Nisi registriran! Registriraj se.");
-            firebase
-              .auth()
-              .signOut()
-              .then(() => {
-                this.$router.push({ name: "postojecikorisnik" });
-              });
-          }
+        .then(function (result) {
+          console.log("Uspješna prijava!", result);
         })
-
-        // tu mi nešto nije okay, budem istraživala
-        .catch((e) => {
-          console.error(e.message);
-          this.errorMessage = e.message;
+        .catch(function (e) {
+          console.error("Greška!!!", e);
         });
     },
   },
 };
-</script> 
+</script>
