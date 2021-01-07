@@ -44,28 +44,32 @@ Zaduženja (planirano) po članovima tima:
 
         1. MARIJELA MILIČEVIĆ
 
-        - dijagrami
+        - dijagrami (use case, class diagram)
 
         - prototip
 
         - postavljanje repozitorija na git
 
-        - kodiranje
+        - kodiranje (home, prijava i registracija,)
+
+        - firebase auth.
 
         - dizajn
 
         - testiranje
+
+        - dokumentacija
 
 
         2. MELITA BRDAR
 
         - prototip
 
-        - kodiranje
+        - kodiranje (popis knjiga i dodavanje nove knjige)
+
+        - povezivanje
 
         - dizajn
-
-        - testiranje
 
         - dokumentacija 
 
@@ -76,13 +80,11 @@ Zaduženja (planirano) po članovima tima:
 
         - baza podataka
 
-        - dizajn
+        - kodiranje (pretraga knjiga)
 
-        - kodiranje
+        - spajanje sa bazom
 
-        - testiranje
 
-        - provjera
 
 # pi-readabook
 
