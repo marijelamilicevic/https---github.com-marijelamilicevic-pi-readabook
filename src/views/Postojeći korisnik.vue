@@ -26,6 +26,9 @@
         class="btn btn-dark btn-lg btn-block"
       >
         Prijavi se!
+        <router-link to="/Glavnipregled"
+          ><button class="btn btn primary"></button
+        ></router-link>
       </button>
     </form>
   </div>
@@ -55,6 +58,10 @@ export default {
         .catch(function (e) {
           console.error("Greška!!!", e);
         });
+
+      <router-link to="/Glavnipregled">
+        <button class="btn btn primary"></button>
+      </router-link>;
     },
   },
 };

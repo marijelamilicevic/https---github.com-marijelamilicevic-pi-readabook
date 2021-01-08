@@ -7,10 +7,20 @@
   </div>
 </template>
 
-<!-- treba srediti stranicu, obrisati onaj dio jer mi nemamo navbar na glavnoj stranici i dodati kao što smo u Figmi radili + nemam pojma šta mi ovo dva put tu radi, sredit ću -->
+<script>
+import { firebase } from "/@firebase";
 
-<style lang="scss">
-main {
-  background-image: url("./assets/logo.png");
-}
-</style>
+firebase.auth().onAuthStateChanged((user) => {
+  //umjesto funkcije
+  if (user) {
+    //ako postoji, onda je korisnik ulogiran
+    // User is signed in.
+    console.log("***", user.email);
+  } else {
+    // ako ne postoji, korisnik ne postoji i nema ga
+    // User is not signed in.
+    console.log("***No user");
+  }
+});
+
+// treba dodati te buttone i na glavni pregled tj. povezati da se kad se ulogira ode na glavni pregled

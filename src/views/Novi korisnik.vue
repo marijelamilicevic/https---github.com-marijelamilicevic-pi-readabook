@@ -63,7 +63,10 @@ export default {
         .catch(function (error) {
           console.error("Došlo je do greške!", error);
         });
-      console.log("Nastavak");
+
+      <router-link to="/Glavnipregled">
+        <button class="btn btn primary"></button>
+      </router-link>;
     },
   },
 };
