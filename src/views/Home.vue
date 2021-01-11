@@ -88,7 +88,7 @@ h1 {
   font-family: Great Vibes;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 70px;
   line-height: 225px;
   text-align: center;
 
