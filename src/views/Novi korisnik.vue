@@ -75,9 +75,7 @@ export default {
           console.error("Došlo je do greške!", error);
         });
 
-      <router-link to="/Glavnipregled">
-        <button class="btn btn primary"></button>
-      </router-link>;
+      <router-link to="/Glavnipregled.vue"></router-link>;
     },
   },
 };
@@ -93,10 +91,10 @@ export default {
 }
 button {
   position: absolute;
-  width: 422px;
-  height: 61px;
-  left: 509px;
-  top: 421px;
+  width: 244px;
+  height: 51px;
+  left: 66px;
+  top: 927px;
 
   background: #eaca7a;
   border-radius: 10px;

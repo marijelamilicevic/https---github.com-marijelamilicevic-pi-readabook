@@ -15,7 +15,11 @@
               <strong>Novi korisnik</strong>
             </button></router-link
           >
-          > >
+          <router-link to="/Glavni pregled"
+            ><button class="btn btn primary">
+              <strong>Baza knjiga</strong>
+            </button></router-link
+          >
         </div>
       </div>
     </div>

@@ -67,9 +67,7 @@ export default {
           console.error("Greška!!!", e);
         });
 
-      <router-link to="/Glavnipregled">
-        <button class="btn btn primary"></button>
-      </router-link>;
+      <router-link to="/Glavnipregled.vue"></router-link>;
     },
   },
 };
