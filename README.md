@@ -50,7 +50,7 @@ Zaduženja (planirano) po članovima tima:
 
         - postavljanje repozitorija na git
 
-        - kodiranje (home, prijava i registracija,)
+        - kodiranje (home, prijava i registracija, uvod u glavni pregled)
 
         - firebase auth.
 
@@ -67,7 +67,7 @@ Zaduženja (planirano) po članovima tima:
 
         - kodiranje (popis knjiga i dodavanje nove knjige)
 
-        - povezivanje
+        - povezivanje tih stranica
 
         - dizajn
 
@@ -81,6 +81,8 @@ Zaduženja (planirano) po članovima tima:
         - baza podataka
 
         - kodiranje (pretraga knjiga)
+        
+        - spajanje s ostalim stranicama
 
         - spajanje sa bazom
 
