@@ -43,7 +43,6 @@ image {
   height: 750px;
   background-color: rgb(199, 102, 33);
   background-attachment: fixed;
-  background-image: url("/assets/naslovna.jpg");
   border-radius: undefinedpx 0 0 0;
 }
 button {
