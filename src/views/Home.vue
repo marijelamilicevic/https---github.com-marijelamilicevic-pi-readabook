@@ -3,7 +3,9 @@
     <div>
       <h1>Read a book</h1>
       <div>
-        <div :style="image"></div>
+        <section>
+          <div :style="image" class="image"></div>
+        </section>
         <div class="tekst">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
@@ -33,38 +35,16 @@ export default {
 </script>
  
 <style scoped>
+image {
+  background-color: saddlebrown;
+}
 .home {
-  width: 1494px;
-  height: 1021px;
-  background-color: gray;
+  width: 1518px;
+  height: 750px;
+  background-color: rgb(199, 102, 33);
   background-attachment: fixed;
   background-image: url("/assets/naslovna.jpg");
   border-radius: undefinedpx 0 0 0;
-}
-.image {
-  position: absolute;
-  width: 1494px;
-  height: 1021px;
-  left: calc(50% - 1494px / 2 - 27px);
-  top: calc(50% - 1021px / 2 + 8.81px);
-  background: url("/assets/naslovna.jpg");
-  filter: blur(8px);
-}
-button {
-  position: absolute;
-  width: 422px;
-  height: 61px;
-  left: 509px;
-  top: 421px;
-
-  background: #eaca7a;
-  border-radius: 10px;
-  position: absolute;
-
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
 }
 button {
   position: absolute;
@@ -81,6 +61,9 @@ button {
   height: 48px;
   left: 580px;
   top: 427px;
+}
+button:hover {
+  box-shadow: 9px 9px 7px black;
 }
 h1 {
   position: absolute;

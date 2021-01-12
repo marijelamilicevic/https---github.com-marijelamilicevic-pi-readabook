@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Postojeći si korisnik? Prijavi se!</h1>
+    <h3>Postojeći si korisnik? Prijavi se!</h3>
     <div class="container">
       <div class="row">
         <div class="col-sm"></div>
@@ -98,7 +98,10 @@ button {
   left: 580px;
   top: 427px;
 }
-h1 {
+.margin-left {
+  margin-left: 80px !important;
+}
+h3 {
   position: right;
   width: 870px;
   height: 174px;
