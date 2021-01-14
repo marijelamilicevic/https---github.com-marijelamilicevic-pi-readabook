@@ -5,7 +5,6 @@
       <div></div>
       <h3>Dobrodošao korisniče!</h3>
       <div>
-        <div :style="image"></div>
         <div class="tekst">
           <router-link to="/Pretraga baze knjiga"
             ><button class="btn btn primary">
@@ -23,17 +22,25 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Glavni pregled",
+};
+</script>
+
 <style scoped>
 h1 {
-  position: right;
+  position: absolute;
   width: 870px;
   height: 174px;
-
+  left: 562px;
+  top: 42px;
   font-family: Great Vibes;
-  font-size: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
   line-height: 225px;
-  text-align: right;
-
+  text-align: center;
   color: #eaca7a;
 }
 h3 {
@@ -46,7 +53,7 @@ h3 {
   font-family: Great Vibes;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 25px;
   line-height: 225px;
   text-align: center;
 
@@ -67,19 +74,7 @@ button {
   left: 580px;
   top: 427px;
 }
-button {
-  position: absolute;
-  width: 244px;
-  height: 51px;
-  left: 66px;
-  top: 927px;
-
-  background: #eaca7a;
-  border-radius: 10px;
-
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
+button:hover {
+  box-shadow: 9px 9px 7px black;
 }
 </style>

@@ -3,9 +3,6 @@
     <div>
       <h1>Read a book</h1>
       <div>
-        <div id="app">
-          <img src="" />
-        </div>
         <div class="text">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
@@ -16,6 +13,12 @@
           <router-link to="/Novi korisnik"
             ><button class="btn btn primary">
               <strong>Novi korisnik</strong>
+            </button></router-link
+          >
+          <div class="divider" />
+          <router-link to="/Glavni pregled"
+            ><button class="btn btn primary">
+              <strong>Baza knjiga </strong>
             </button></router-link
           >
         </div>
@@ -53,7 +56,7 @@ button {
   top: 427px;
 }
 .divider {
-  width: 10px;
+  width: 20px;
   height: auto;
   display: inline-block;
 }

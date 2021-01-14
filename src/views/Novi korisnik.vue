@@ -32,6 +32,7 @@
               <label for="exampleInputPassword1">Lozinka</label>
               <input
                 type="password"
+                v-model="lozinka"
                 class="form-control"
                 id="exampleInputPassword1"
                 placeholder="Unesi lozinku"
@@ -70,10 +71,8 @@ export default {
         .createUserWithEmailAndPassword(this.email, this.lozinka)
         .then(function () {
           console.log("Uspješna registracija!");
-        })
-        .catch(function (error) {
-          console.error("Došlo je do greške!", error);
         });
+      console.log("Nastavak...");
 
       <router-link to="/Glavnipregled.vue"></router-link>;
     },
