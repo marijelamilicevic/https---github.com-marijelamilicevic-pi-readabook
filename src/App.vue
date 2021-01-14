@@ -15,12 +15,23 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     //ako postoji, onda je korisnik ulogiran
     // User is signed in.
-    console.log("***", user.email);
+    console.log("*** User", user.email);
   } else {
     // ako ne postoji, korisnik ne postoji i nema ga
     // User is not signed in.
     console.log("***No user");
   }
 });
+
+export default {
+  name: "Glavni pregled",
+  data() {
+  },
+  methods: {
+    logout() {
+      firebase.auth().signOut();
+    },
+  },
+};
 
 // treba dodati te buttone i na glavni pregled tj. povezati da se kad se ulogira ode na glavni pregled

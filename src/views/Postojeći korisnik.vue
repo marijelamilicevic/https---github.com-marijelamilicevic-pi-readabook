@@ -27,12 +27,12 @@
                 placeholder="Tvoja lozinka"
               />
             </div>
-            <button
+             <button
               type="button"
-              @click="postojećikorisnik;"
+              @click="Postojećikorisnik()"
               class="btn btn-dark btn-lg btn-block"
             >
-              Prijavi se!
+            Prijavi se!
             </button>
           </form>
         </div>
@@ -43,45 +43,39 @@
 </template>
 
 <script>
-import { firebase } from "@/firebase";
+
+import { firebase } from "@/firebase.js";
 
 export default {
-  name: "postojecikorisnik",
-  data() {
+  name: "Postojećikorisnik",
+  data () {
     return {
       email: "",
       lozinka: "",
-    };
+    }
   },
   methods: {
-    postojećikorisnik() {
-      console.log("postojećikorisnik..." + this.email);
+    Postojećikorisnik: function() {
+      console.log("Postojećikorisnik..." + this.email)
 
       firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.lozinka)
-        .then(function (result) {
-          console.log("Uspješna prijava!", result);
-        })
-        .catch(function (e) {
-          console.error("Greška!!!", e);
-        });
-
-      <router-link to="/Glavnipregled.vue"></router-link>;
+      .auth()
+      .signInWithEmailAndPassword(this.email, this.lozinka)
+      .then((result) => {
+        console.log("Uspješna prijava!", result);
+       
+       this.$router.replace({name: "Glavni pregled"});
+      })
+      .catch (function (err) {
+        console.error("Greška!", err)
+      });
     },
   },
 };
+
 </script>
 
 <style scoped>
-.postojećikorisnik {
-  width: 1494px;
-  height: 1021px;
-  background-color: gray;
-  background-attachment: fixed;
-  background-image: url("/assets/naslovna.jpg");
-  border-radius: undefinedpx 0 0 0;
-}
 button {
   position: absolute;
   width: 422px;

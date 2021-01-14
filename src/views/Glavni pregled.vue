@@ -1,6 +1,18 @@
 <template>
-  <div class="glavni pregled">
-    <div>
+  <div id="nav">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="@/assets/Slike/logo_za_navbar.png"
+            alt=""
+            height="24"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <a href="#" @click="logout()" class="nav-link">Odjava</a>
+      </div>
+    </nav>
       <h1>Read a book</h1>
       <div></div>
       <h3>Dobrodošao korisniče!</h3>
@@ -18,17 +30,23 @@
           >
         </div>
       </div>
-    </div>
+   
   </div>
 </template>
 
 <script>
-export default {
-  name: "Glavni pregled",
-};
+
 </script>
 
 <style scoped>
+nav {
+  padding: 30px;
+}
+a {
+  font-weight: bold;
+  color: black;
+  text-align: right;
+}
 h1 {
   position: absolute;
   width: 870px;

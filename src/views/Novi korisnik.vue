@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Ljubitelj si knjiga? Registriraj se!</h1>
+  <div class="Glavni pregled">
+    <h1>Ljubitelj si knjiga? Registriraj se</h1>
     <div class="container">
       <div class="row">
         <div class="col-sm"></div>
@@ -40,7 +40,7 @@
             </div>
             <button
               type="button"
-              @click="novikorisnik"
+              @click="novikorisnik()"
               class="btn btn-dark btn-lg btn-block"
             >
               Registriraj se!
@@ -64,6 +64,7 @@ export default {
       lozinka: "",
     };
   },
+
   methods: {
     novikorisnik: function () {
       firebase
@@ -71,14 +72,17 @@ export default {
         .createUserWithEmailAndPassword(this.email, this.lozinka)
         .then(function () {
           console.log("Uspješna registracija!");
-        });
-      console.log("Nastavak...");
 
-      <router-link to="/Glavnipregled.vue"></router-link>;
+          this.$router.replace({name: "Glavni pregled"});
+        });
+
+        //e al sad tu treba smislit da kad se ulogiraš i nedaj bože klikneš back te vrati na home.vue
+      console.log("Nastavak...");
     },
   },
 };
 </script> 
+
 <style scoped>
 .novikorisnik {
   width: 1494px;
