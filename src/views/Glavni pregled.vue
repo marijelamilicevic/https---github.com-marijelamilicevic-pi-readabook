@@ -1,17 +1,11 @@
 <template>
   <div id="nav">
     <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="@/assets/Slike/logo_za_navbar.png"
-            alt=""
-            height="24"
-            class="d-inline-block align-top"
-          />
-        </a>
-        <a href="#" @click="logout()" class="nav-link">Odjava</a>
-      </div>
+      <div class="container">
+      <p>
+        <a href="#" @click="odjava()" class="nav-link">Odjava</a>
+      </p> 
+    </div>
     </nav>
       <h1>Read a book</h1>
       <div></div>
@@ -23,6 +17,7 @@
               <strong>Pretraga baze knjiga</strong>
             </button></router-link
           >
+          <div class="divider" />
           <router-link to="/Dodavanje nove knjige"
             ><button class="btn btn primary">
               <strong>Dodaj novu knjigu</strong>
@@ -36,6 +31,23 @@
 
 <script>
 
+import { firebase } from "@/firebase.js";
+
+
+export default {
+  data: function () {
+  },
+
+  methods: {
+    odjava: function () {
+        firebase
+        .auth().signOut().then(() => {
+      });
+    this.$router.replace({name: "Home"});
+
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -76,6 +88,26 @@ h3 {
   text-align: center;
 
   color: #eaca7a;
+}
+button {
+  position: absolute;
+  width: 244px;
+  height: 51px;
+  left: 66px;
+  top: 927px;
+
+  background: #eaca7a;
+  border-radius: 10px;
+
+  width: 279px;
+  height: 48px;
+  left: 580px;
+  top: 427px;
+}
+.divider {
+  width: 20px;
+  height: auto;
+  display: inline-block;
 }
 button {
   position: absolute;

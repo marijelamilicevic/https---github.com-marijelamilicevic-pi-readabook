@@ -75,8 +75,6 @@ export default {
 
           this.$router.replace({name: "Glavni pregled"});
         });
-
-        //e al sad tu treba smislit da kad se ulogiraš i nedaj bože klikneš back te vrati na home.vue
       console.log("Nastavak...");
     },
   },
@@ -85,11 +83,11 @@ export default {
 
 <style scoped>
 .novikorisnik {
-  width: 1494px;
-  height: 1021px;
-  background-color: saddlebrown;
+  width: 1518px;
+  height: 750px;
+  background-image: url();
+  background-color: peru;
   background-attachment: fixed;
-  background-image: url("/assets/naslovna.jpg");
   border-radius: undefinedpx 0 0 0;
 }
 button {

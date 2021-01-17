@@ -2,7 +2,7 @@
   <div class="home">
     <div>
       <h1>Read a book</h1>
-      <div>
+        <div :style="image"></div>      <div>
         <div class="text">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
@@ -38,7 +38,8 @@ export default {
 .home {
   width: 1518px;
   height: 750px;
-  background-color: rgb(199, 102, 33);
+  background-image: url();
+  background-color: peru;
   background-attachment: fixed;
   border-radius: undefinedpx 0 0 0;
 }
