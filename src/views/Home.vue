@@ -15,12 +15,6 @@
               <strong>Novi korisnik</strong>
             </button></router-link
           >
-          <div class="divider" />
-          <router-link to="/Glavni pregled"
-            ><button class="btn btn primary">
-              <strong>Baza knjiga </strong>
-            </button></router-link
-          >
         </div>
       </div>
     </div>
@@ -74,7 +68,7 @@ h1 {
   font-family: Great Vibes;
   font-style: normal;
   font-weight: normal;
-  font-size: 70px;
+  font-size: 100px;
   line-height: 225px;
   text-align: center;
   color: #eaca7a;

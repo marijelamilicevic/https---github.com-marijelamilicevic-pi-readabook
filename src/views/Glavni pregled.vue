@@ -109,22 +109,4 @@ button {
   height: auto;
   display: inline-block;
 }
-button {
-  position: absolute;
-  width: 244px;
-  height: 51px;
-  left: 66px;
-  top: 927px;
-
-  background: #eaca7a;
-  border-radius: 10px;
-
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
-}
-button:hover {
-  box-shadow: 9px 9px 7px black;
-}
 </style>
