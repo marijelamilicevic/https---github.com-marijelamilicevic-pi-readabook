@@ -12,15 +12,9 @@
       <h3>Dobrodošao korisniče!</h3>
       <div>
         <div class="tekst">
-          <router-link to="/Pretraga baze knjiga"
-            ><button class="btn btn primary">
-              <strong>Pretraga baze knjiga</strong>
-            </button></router-link
-          >
-          <div class="divider" />
           <router-link to="/Dodavanje nove knjige"
             ><button class="btn btn primary">
-              <strong>Dodaj novu knjigu</strong>
+              <strong>Dodavanje nove knjige</strong>
             </button></router-link
           >
         </div>
@@ -44,7 +38,6 @@ export default {
         .auth().signOut().then(() => {
       });
     this.$router.replace({name: "Home"});
-
     },
   },
 };
@@ -103,6 +96,9 @@ button {
   height: 48px;
   left: 580px;
   top: 427px;
+}
+button:hover {
+  box-shadow: 9px 9px 7px black;
 }
 .divider {
   width: 20px;

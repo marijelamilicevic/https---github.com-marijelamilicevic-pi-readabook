@@ -2,7 +2,7 @@
   <div class="home">
     <div>
       <h1>Read a book</h1>
-        <div :style="image"></div>      <div>
+       <div>
         <div class="text">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">

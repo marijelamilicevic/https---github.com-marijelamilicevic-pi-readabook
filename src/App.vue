@@ -33,5 +33,3 @@ export default {
     },
   },
 };
-
-// treba dodati te buttone i na glavni pregled tj. povezati da se kad se ulogira ode na glavni pregled
