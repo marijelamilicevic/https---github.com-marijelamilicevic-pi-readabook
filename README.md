@@ -10,7 +10,7 @@ Sastav:
 
         Tomislav Percan - tomislav.percan@student.unipu.hr
 
-Sveučilište Jurja Dobrile u Pili
+Sveučilište Jurja Dobrile u Puli
 
 Fakultet informatike - https://fipu.unipu.hr
 
@@ -40,7 +40,7 @@ Link na prototip aplikacije:
 
 https://www.figma.com/file/0lUF88Ahseet11SKOARYTO/Read-a-book-Prototip?node-id=0%3A1
 
-Zaduženja (planirano) po članovima tima:
+Zaduženja po članovima tima:
 
         1. MARIJELA MILIČEVIĆ
 
@@ -50,7 +50,7 @@ Zaduženja (planirano) po članovima tima:
 
         - postavljanje repozitorija na git
 
-        - kodiranje (home, prijava i registracija, uvod u glavni pregled)
+        - kodiranje (home, prijava, registracija, uvod u glavni pregled, uvod u dodaj novu knjigu)
 
         - firebase auth.
 
