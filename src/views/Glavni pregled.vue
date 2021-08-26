@@ -17,9 +17,16 @@
               <strong>Dodavanje nove knjige</strong>
             </button></router-link
           >
+          <div class="divider" />
+          <router-link to="/Pretraga baze knjiga"
+            ><button class="btn btn primary">
+              <strong>Pretraga baze knjiga</strong>
+            </button></router-link
+          >
+        </div>
         </div>
       </div>
-   
+   !--pregledati
   </div>
 </template>
 
