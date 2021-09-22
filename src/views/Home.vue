@@ -7,14 +7,12 @@
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
               <strong>Postojeći korisnik</strong>
-            </button></router-link
-          >
+            </button></router-link>
           <div class="divider" />
           <router-link to="/Novi korisnik"
             ><button class="btn btn primary">
               <strong>Novi korisnik</strong>
-            </button></router-link
-          >
+            </button></router-link>
         </div>
       </div>
     </div>
@@ -29,14 +27,6 @@ export default {
 </script>
  
 <style scoped>
-.home {
-  width: 1518px;
-  height: 750px;
-  background-image: url();
-  background-color: peru;
-  background-attachment: fixed;
-  border-radius: undefinedpx 0 0 0;
-}
 button {
   position: absolute;
   width: 422px;
@@ -52,7 +42,7 @@ button {
   top: 427px;
 }
 .divider {
-  width: 20px;
+  width: 140px;
   height: auto;
   display: inline-block;
 }
@@ -60,17 +50,14 @@ button:hover {
   box-shadow: 9px 9px 7px black;
 }
 h1 {
-  position: absolute;
+  position:absolute;
   width: 870px;
   height: 174px;
   left: 562px;
   top: 42px;
   font-family: Great Vibes;
-  font-style: normal;
-  font-weight: normal;
   font-size: 100px;
   line-height: 225px;
-  text-align: center;
   color: #eaca7a;
 }
 </style>
