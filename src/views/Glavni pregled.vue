@@ -8,26 +8,8 @@
     </div>
     </nav>
       <h1>Read a book</h1>
-      <div></div>
       <h3>Dobrodošao korisniče!</h3>
-      <div>
-        <div class="tekst">
-          <router-link to="/Dodavanje nove knjige"
-            ><button class="btn btn primary">
-              <strong>Dodavanje nove knjige</strong>
-            </button></router-link
-          >
-          <div class="divider" />
-          <router-link to="/Pretraga baze knjiga"
-            ><button class="btn btn primary">
-              <strong>Pretraga baze knjiga</strong>
-            </button></router-link
-          >
         </div>
-        </div>
-      </div>
-   !--pregledati
-  </div>
 </template>
 
 <script>

@@ -2,7 +2,6 @@
   <div class="home">
     <div>
       <h1>Read a book</h1>
-       <div>
         <div class="text">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
@@ -13,7 +12,6 @@
             ><button class="btn btn primary">
               <strong>Novi korisnik</strong>
             </button></router-link>
-        </div>
       </div>
     </div>
   </div>
@@ -27,12 +25,12 @@ export default {
 </script>
  
 <style scoped>
+
+.Home {
+  background-color: brown;
+}
 button {
-  position: absolute;
-  width: 422px;
-  height: 61px;
-  left: 560px;
-  top: 421px;
+  position: relative;
   background: #eaca7a;
   border-radius: 10px;
   position: relative;
@@ -50,14 +48,9 @@ button:hover {
   box-shadow: 9px 9px 7px black;
 }
 h1 {
-  position:absolute;
-  width: 870px;
-  height: 174px;
-  left: 562px;
-  top: 42px;
+  position: center;
   font-family: Great Vibes;
   font-size: 100px;
-  line-height: 225px;
   color: #eaca7a;
 }
 </style>
