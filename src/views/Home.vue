@@ -2,7 +2,7 @@
   <div class="home">
     <div>
       <h1>Read a book</h1>
-        <div class="text">
+        <div class="button">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
               <strong>Postojeći korisnik</strong>
@@ -26,29 +26,32 @@ export default {
  
 <style scoped>
 
-.Home {
-  background-color: brown;
+.home {
+  width: 1518px;
+  height: 750px;
+  background-color: rgb(219, 139, 19);
+  background-attachment: fixed; 
 }
 button {
-  position: relative;
-  background: #eaca7a;
-  border-radius: 10px;
-  position: relative;
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
+    margin: 4px;
+    width: 40%;
+    border-radius: 20px;
+    padding: 1% 5%;
+    background-color:rgb(231, 180, 69);
+    font-size: 130%;
+    margin: 5%;
+    color: black;
+    align-content: center;
 }
 .divider {
-  width: 140px;
-  height: auto;
+  width: 150px;
   display: inline-block;
 }
 button:hover {
   box-shadow: 9px 9px 7px black;
 }
 h1 {
-  position: center;
+  text-align: center;
   font-family: Great Vibes;
   font-size: 100px;
   color: #eaca7a;
