@@ -1,18 +1,20 @@
 <template>
   <div class="home">
     <div>
+      <img src="@/assets/books.jpg" class="img-fluid">
       <h1>Read a book</h1>
+      <h3>„Onaj tko ne voli čitati nije pronašao pravu knjigu za sebe.” – J.K. Rowling</h3>
         <div class="button">
           <router-link to="/Postojeći korisnik"
             ><button class="btn btn primary">
               <strong>Postojeći korisnik</strong>
             </button></router-link>
-          <div class="divider" />
           <router-link to="/Novi korisnik"
             ><button class="btn btn primary">
               <strong>Novi korisnik</strong>
             </button></router-link>
-      </div>
+        </div>
+         <img src="@/assets/books2.jpg" class="img-fluid">
     </div>
   </div>
 </template>
@@ -27,8 +29,8 @@ export default {
 <style scoped>
 
 .home {
-  width: 1518px;
-  height: 750px;
+  width: fit-content;
+  height:fit-content;
   background-color: rgb(219, 139, 19);
   background-attachment: fixed; 
 }
@@ -52,8 +54,15 @@ button:hover {
 }
 h1 {
   text-align: center;
-  font-family: Great Vibes;
+  font-family: 'Times New Roman';
   font-size: 100px;
-  color: #eaca7a;
+  color: black;
+}
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  color: black;
 }
 </style>
