@@ -66,7 +66,7 @@ export default {
       .then((result) => {
         console.log("Uspješna prijava!", result);
        
-       this.$router.replace({name: "Glavni pregled"});
+       this.$router.replace({name: "Glavni_pregled"});
       })
       .catch (function (err) {
         console.error("Greška!", err)
