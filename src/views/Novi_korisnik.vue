@@ -52,6 +52,7 @@
         <div class="col-sm"></div>
       </div>
     </div>
+    <img src="@/assets/books2.jpg" class="img-fluid" />
   </div>
 </template>
 
@@ -85,8 +86,8 @@ export default {
 
 <style scoped>
 .novikorisnik {
-  width: 1518px;
-  height: 750px;
+  width: fit-content;
+  height:fit-content;
   background-color: rgb(219, 139, 19);
   background-attachment: fixed; 
 }

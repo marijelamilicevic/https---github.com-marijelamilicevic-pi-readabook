@@ -5,12 +5,30 @@
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
       <h1>Read a book</h1>
       <h3>Čitanje je jedna od najdražih aktivnosti svih knjiških moljaca. Čitanje može biti gušt, 
-        čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. 
-        Ukratko, čitanje može biti mnogo toga. Da ne bi bilo da je samo naše mišljenje bitno, sad ćemo dati riječ 
-        poznatim autoricama i autorima, kritičarima i glazbenicima i vidjeti na koji se način knjige mogu čitati, 
-        kakav je to dobar čitatelj, kakvih se čitatelja boje, a naposljetku kako uopće doživljavaju čitanje.</h3>
+        čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. </h3>
       </div>
+    <div class="card" style="max-width: 535px">
+      <div class="row g-0">
+        <div class="col-md-4">
+      <img src="@/assets/HP1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Harry Potter i Kamen mudraca Autor: J.K. Rowling</h5>
+        <p class="card-text">Roditelji Harryja Pottera stradali su dok je još bio jednogodišnja beba. 
+          Deset je dugih i neveselih ljeta Harry proveo kao neželjen gost pod krovom Dursleyjevih, 
+          pod grdnjom navijek ljute tete Petunije...</p>
+         <button type="button" class="btn btn-lg">Više o knjizi</button>
+      </div>
+    </div>
   </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-lg" type="button">Dodaj novu knjigu</button>
+  <button class="btn btn-lg" type="button">Pretraga baze knjiga</button>
+</div>
+<img src="@/assets/books2.jpg" class="img-fluid" />
+ </div>
 </template>
 
 <script>
@@ -35,8 +53,8 @@ export default {
 
 <style scoped>
 .glavnipregled {
-  width: 1518px;
-  height: 750px;
+  width: fit-content;
+  height: fit-content;
   background-color: rgb(219, 139, 19);
   background-attachment: fixed; 
 }
@@ -62,5 +80,24 @@ p{
 a{
   color: black;
   font-size: 20px;
+}
+button {
+    margin: 4px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 1% 5%;
+    background-color:rgb(231, 180, 69);
+    font-size: 100%;
+    margin: 5%;
+    color: black;
+    align-content: center;
+    position: center;
+}
+button:hover {
+  box-shadow: 9px 9px 7px black;
+}
+.card{
+    align-items: center;
+    justify-content: center;
 }
 </style>
