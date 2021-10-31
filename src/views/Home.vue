@@ -15,6 +15,7 @@
             </button></router-link>
         </div>
          <img src="@/assets/books2.jpg" class="img-fluid">
+         <h8>Read a book 2021./2022.</h8>
     </div>
   </div>
 </template>
@@ -63,6 +64,13 @@ h3 {
   font-style: italic;
   font-family: 'Times New Roman';
   font-size: 20px;
+  color: black;
+}
+h8 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  font-size: 12px;
   color: black;
 }
 </style>

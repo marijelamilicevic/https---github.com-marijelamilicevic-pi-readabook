@@ -75,8 +75,8 @@ export default {
         .then(function () {
           console.log("Uspješna registracija!");
 
-          this.$router.replace({name: "Glavni pregled"});
-        });
+          this.$router.replace({name: "Postojeći korisnik"});
+        })
       console.log("Nastavak...");
     },
   },
