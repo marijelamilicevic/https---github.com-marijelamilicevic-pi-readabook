@@ -1,6 +1,8 @@
 <template>
-  <div class="Glavni pregled">
-    <h1>Ljubitelj si knjiga? Registriraj se</h1>
+  <div class="novikorisnik">
+    <img src="@/assets/books.jpg" class="img-fluid">
+    <h1>Read a book</h1>
+    <h3>„Oh, kako je dobro biti među ljudima koji čitaju knjige.” – Rainer Maria Rilke</h3>
     <div class="container">
       <div class="row">
         <div class="col-sm"></div>
@@ -14,7 +16,7 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                placeholder="Unesi ime i prezime"
+                placeholder="Tvoje ime i prezime"
               />
             </div>
             <div class="form-group">
@@ -25,7 +27,7 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                placeholder="Unesi e-mail"
+                placeholder="Tvoj e-mail"
               />
             </div>
             <div class="form-group">
@@ -35,13 +37,13 @@
                 v-model="lozinka"
                 class="form-control"
                 id="exampleInputPassword1"
-                placeholder="Unesi lozinku"
+                placeholder="Tvoja lozinku"
               />
             </div>
             <button
               type="button"
               @click="novikorisnik()"
-              class="btn btn-dark btn-lg btn-block"
+              class="btn btn-lg btn-lg"
             >
               Registriraj se!
             </button>
@@ -85,41 +87,35 @@ export default {
 .novikorisnik {
   width: 1518px;
   height: 750px;
-  background-image: url();
-  background-color: peru;
-  background-attachment: fixed;
-  border-radius: undefinedpx 0 0 0;
+  background-color: rgb(219, 139, 19);
+  background-attachment: fixed; 
 }
 button {
-  position: absolute;
-  width: 244px;
-  height: 51px;
-  left: 66px;
-  top: 927px;
-
-  background: #eaca7a;
-  border-radius: 10px;
-  position: absolute;
-
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
+    margin: 4px;
+    width: 40%;
+    border-radius: 5px;
+    padding: 1% 5%;
+    background-color:rgb(231, 180, 69);
+    font-size: 130%;
+    margin: 5%;
+    color: black;
+    align-content: center;
+    position: center;
+}
+button:hover {
+  box-shadow: 9px 9px 7px black;
 }
 h1 {
-  position: right;
-  width: 870px;
-  height: 174px;
-  left: 562px;
-  top: 42px;
-
-  font-family: Great Vibes;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 225px;
   text-align: center;
-
-  color: #eaca7a;
+  font-family: 'Times New Roman';
+  font-size: 100px;
+  color: black;
+}
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  color: black;
 }
 </style>

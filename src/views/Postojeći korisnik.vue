@@ -1,6 +1,8 @@
 <template>
-  <div class="about">
-    <h3>Postojeći si korisnik? Prijavi se!</h3>
+  <div class="postojecikorisnik">
+    <img src="@/assets/books.jpg" class="img-fluid">
+    <h1>Read a book</h1>
+    <h3>„Knjiga je dar koji možeš otvarati opet i opet.” – Garrison Kellior</h3>
     <div class="container">
       <div class="row">
         <div class="col-sm"></div>
@@ -30,7 +32,7 @@
              <button
               type="button"
               @click="Postojećikorisnik()"
-              class="btn btn-dark btn-lg btn-block"
+              class="btn btn-lg btn-lg "
             >
             Prijavi se!
             </button>
@@ -76,39 +78,38 @@ export default {
 </script>
 
 <style scoped>
-button {
-  position: absolute;
-  width: 422px;
-  height: 61px;
-  left: 509px;
-  top: 421px;
-
-  background: #eaca7a;
-  border-radius: 10px;
-  position: absolute;
-
-  width: 279px;
-  height: 48px;
-  left: 580px;
-  top: 427px;
+.postojecikorisnik {
+  width: 1518px;
+  height: 750px;
+  background-color: rgb(219, 139, 19);
+  background-attachment: fixed; 
 }
-.margin-left {
-  margin-left: 80px !important;
+button {
+    margin: 4px;
+    width: 40%;
+    border-radius: 5px;
+    padding: 1% 5%;
+    background-color:rgb(231, 180, 69);
+    font-size: 130%;
+    margin: 5%;
+    color: black;
+    align-content: center;
+    position: center;
+}
+button:hover {
+  box-shadow: 9px 9px 7px black;
+}
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 100px;
+  color: black;
 }
 h3 {
-  position: right;
-  width: 870px;
-  height: 174px;
-  left: 562px;
-  top: 42px;
-
-  font-family: Great Vibes;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 225px;
   text-align: center;
-
-  color: #eaca7a;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  color: black;
 }
 </style>
