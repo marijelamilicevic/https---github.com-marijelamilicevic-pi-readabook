@@ -24,8 +24,18 @@
   </div>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-lg" type="button">Dodaj novu knjigu</button>
-  <button class="btn btn-lg" type="button">Pretraga baze knjiga</button>
+    <div class="button">
+        <router-link to="/Dodaj_knjigu"
+          ><button class="btn btn primary">
+            <strong>Dodaj knjigu u bazu</strong>
+          </button></router-link
+        >
+        <router-link to="/Pretraga"
+          ><button class="btn btn primary">
+            <strong>Pretraga baze knjiga</strong>
+          </button></router-link
+        >
+      </div>
 </div>
 <img src="@/assets/books2.jpg" class="img-fluid" />
  </div>
