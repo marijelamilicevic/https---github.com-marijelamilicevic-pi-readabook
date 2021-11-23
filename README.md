@@ -44,17 +44,15 @@ Zaduženja po članovima tima:
 
         1. MARIJELA MILIČEVIĆ
 
-        - dijagrami (use case, class diagram)
-
-        - prototip
+        - dijagrami (use case & class) + prototip
 
         - postavljanje repozitorija na git
 
-        - kodiranje (home, prijava, registracija, uvod u glavni pregled, uvod u dodaj novu knjigu)
+        - kodiranje (home, prijava, registracija, glavni pregled, dodaj novu knjigu, pretraga baze knjiga)
 
-        - firebase auth.
+        - firebase auth. za prijavu/odjavu/registraciju i postavljanje firebase baze
 
-        - dizajn
+        - dizajn i uređivanje stranica
 
         - testiranje
 
@@ -64,12 +62,10 @@ Zaduženja po članovima tima:
         2. MELITA BRDAR
 
         - prototip
-
-        - kodiranje (popis knjiga i dodavanje nove knjige)
-
-        - povezivanje tih stranica
-
-        - dizajn
+        
+        - baza podataka i spajanje s bazom
+        
+        - uređivanje stranica i dizajn
 
         - dokumentacija 
 
@@ -78,14 +74,11 @@ Zaduženja po članovima tima:
 
         - prototip
 
-        - baza podataka
-
-        - kodiranje (pretraga knjiga)
+        - baza podataka i spajanje s bazom
         
-        - spajanje s ostalim stranicama
-
-        - spajanje sa bazom
-
+        - uređivanje stranica i dizajn
+        
+        - dokumentacija
 
 
 # pi-readabook
