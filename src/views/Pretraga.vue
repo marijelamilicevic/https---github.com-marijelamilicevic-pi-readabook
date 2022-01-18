@@ -1,12 +1,12 @@
 <template>
- <div class="glavnipregled">
+  <!-- ovdje nemre biti "glavnipregled" jer je stranica Pretrage, i dolje u style dijelu treba promijeniti-->
+<div class="glavnipregled"> 
     <div>
-      <img src="@/assets/books.jpg" class="img-fluid">
+      <img src="@/assets/books.jpg" class="img-fluid">    <!-- ovo moramo dogovoriti kako ćemo urediti -->
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
       <h1>Pretraga knjige</h1>
-      
       </div>
-    <div>
+    <div>   <!-- možda izmjeniti row i col jer mi je ovo too much široko preko cijele stranice, ne znam -->
         <select v-model="zanr" class="form-select" aria-label="Odaberi zanr">
   <option selected>Open this select menu</option>
   <option value="1">Roman</option>
@@ -32,7 +32,7 @@
         >
         <router-link :to="{path: 'Rezultati', params:{naslovZaPretazivanje: naslov, autor: autor, zanr: zanr} }"
           ><button class="btn btn primary">
-            <strong>Pretrazi</strong>
+            <strong>Pretraži</strong>   <!-- nemaš path niti stranicu Rezultati, ne znam jesi planirao to raditi kao zasebnu stranicu ili? ako da, onda ju treba dodati u index.html i isto je urediti kao zasebni Rezultati.vue da izbacuje samo rezultate -->
           </button></router-link
         >
       </div>
@@ -69,9 +69,9 @@ export default {
 </script>
 
 <style scoped>
-.glavnipregled {
+.glavnipregled { 
   width: fit-content;
-  height: fit-content;
+  height: fit-content; 
   background-color: rgb(219, 139, 19);
   background-attachment: fixed; 
 }
