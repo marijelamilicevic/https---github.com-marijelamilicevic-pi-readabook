@@ -35,6 +35,11 @@ const routes = [
     name: 'Pretraga baze knjiga',
     component: () => import('../views/Pretraga.vue')
   },
+  {
+    path: '/Rezultati/:naslov/:autor/:zanr',
+    name: 'Rezultati',
+    component: () => import('../views/Rezultati.vue')
+  },
 ]
 
 const router = new VueRouter({

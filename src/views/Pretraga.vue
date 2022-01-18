@@ -8,10 +8,11 @@
       </div>
     <div>
         <select v-model="zanr" class="form-select" aria-label="Odaberi zanr">
-  <option selected>Open this select menu</option>
-  <option value="1">Roman</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Odaberi Žanr</option>
+  <option value="1">Lektira</option>
+  <option value="2">Kriminalistika</option>
+  <option value="3">Putopis</option>
+  <option value="3">Roman</option>
 </select>
 <div class="input-group mb-3">
   <input v-model="naslov" type="text" class="form-control" placeholder="Upisi naslov" aria-label="Username">
@@ -27,12 +28,12 @@
     <div class="button">
         <router-link to="/Dodaj_knjigu"
           ><button class="btn btn primary">
-            <strong>Dodaj knjigu u bazu</strong>
+            <strong>Dodaj knjigu</strong>
           </button></router-link
         >
-        <router-link :to="{path: 'Rezultati', params:{naslovZaPretazivanje: naslov, autor: autor, zanr: zanr} }"
+        <router-link :to="{name: 'Rezultati', params: {naslov: naslov, autor: autor, zanr: zanr} }"
           ><button class="btn btn primary">
-            <strong>Pretrazi</strong>
+            <strong>Pretraži</strong>
           </button></router-link
         >
       </div>
