@@ -1,6 +1,6 @@
 <template>
   <!-- ovdje nemre biti "glavnipregled" jer je stranica Pretrage, i dolje u style dijelu treba promijeniti-->
-<div class="glavnipregled"> 
+<div class="pretraga"> 
     <div>
       <img src="@/assets/books.jpg" class="img-fluid">    <!-- ovo moramo dogovoriti kako ćemo urediti -->
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
@@ -9,9 +9,9 @@
     <div>   <!-- možda izmjeniti row i col jer mi je ovo too much široko preko cijele stranice, ne znam -->
         <select v-model="zanr" class="form-select" aria-label="Odaberi zanr">
   <option selected>Odaberi zanr</option>
-  <option value="1">Lektira</option>
-  <option value="2">Kriminalistika</option>
-  <option value="3">Putopis</option>
+  <option value="Lektira">Lektira</option>
+  <option value="Kriminalistika">Kriminalistika</option>
+  <option value="Putopis">Putopis</option>
   
 </select>
 <div class="input-group mb-3">
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-.glavnipregled { 
+.pretraga { 
   width: fit-content;
   height: fit-content; 
   background-color: rgb(219, 139, 19);
