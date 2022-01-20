@@ -1,18 +1,18 @@
 <template>
- <div class="glavnipregled">
+  <!-- ovdje nemre biti "glavnipregled" jer je stranica Pretrage, i dolje u style dijelu treba promijeniti-->
+<div class="glavnipregled"> 
     <div>
-      <img src="@/assets/books.jpg" class="img-fluid">
+      <img src="@/assets/books.jpg" class="img-fluid">    <!-- ovo moramo dogovoriti kako ćemo urediti -->
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
       <h1>Pretraga knjige</h1>
-      
       </div>
-    <div>
+    <div>   <!-- možda izmjeniti row i col jer mi je ovo too much široko preko cijele stranice, ne znam -->
         <select v-model="zanr" class="form-select" aria-label="Odaberi zanr">
-  <option selected>Odaberi Žanr</option>
+  <option selected>Odaberi zanr</option>
   <option value="1">Lektira</option>
   <option value="2">Kriminalistika</option>
   <option value="3">Putopis</option>
-  <option value="3">Roman</option>
+  
 </select>
 <div class="input-group mb-3">
   <input v-model="naslov" type="text" class="form-control" placeholder="Upisi naslov" aria-label="Username">
@@ -28,12 +28,14 @@
     <div class="button">
         <router-link to="/Dodaj_knjigu"
           ><button class="btn btn primary">
-            <strong>Dodaj knjigu</strong>
+            <strong>Dodaj knjigu u bazu</strong>
           </button></router-link
         >
         <router-link :to="{name: 'Rezultati', params: {naslov: naslov, autor: autor, zanr: zanr} }"
           ><button class="btn btn primary">
-            <strong>Pretraži</strong>
+
+            <strong>Pretraži</strong>   <!-- nemaš path niti stranicu Rezultati, ne znam jesi planirao to raditi kao zasebnu stranicu ili? ako da, onda ju treba dodati u index.html i isto je urediti kao zasebni Rezultati.vue da izbacuje samo rezultate -->
+ 
           </button></router-link
         >
       </div>
@@ -70,9 +72,9 @@ export default {
 </script>
 
 <style scoped>
-.glavnipregled {
+.glavnipregled { 
   width: fit-content;
-  height: fit-content;
+  height: fit-content; 
   background-color: rgb(219, 139, 19);
   background-attachment: fixed; 
 }
