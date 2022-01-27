@@ -1,4 +1,10 @@
 <template>
+
+<div>
+  <img src="@/assets/books.jpg" class="img-fluid">    
+      np
+      <h1>Rezultati</h1>
+
   <div>
     {{ $route.params.naslov }}
 {{knjiga}}
@@ -8,6 +14,7 @@
     {{ k.naslov }} - {{k.autor}}
   </li>
 </ul>
+  </div>
   </div>
 </template>
 
@@ -47,5 +54,45 @@ export default {
 </script>
 
 <style scoped>
-
+.rezultati { 
+  width: fit-content;
+  height: fit-content; 
+  background-color: rgb(219, 139, 19);
+  background-attachment: fixed; 
+}
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 100px;
+  color: black;
+}
+h3 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  color: black;
+}
+p{
+  color: black;
+  text-align: right;
+  font-family: 'Times New Roman';
+  position: right;
+}
+a{
+  color: black;
+  font-size: 20px;
+}
+button {
+    margin: 4px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 1% 5%;
+    background-color:rgb(231, 180, 69);
+    font-size: 100%;
+    margin: 5%;
+    color: black;
+    align-content: center;
+    position: center;
+}
 </style>
