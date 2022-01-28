@@ -44,8 +44,8 @@
               type="button"
               @click="novikorisnik()"
               class="btn btn-lg btn-lg"
-            >
-              Registriraj se!
+            >Registriraj se!
+            <router-link to="/Glavni_pregled"></router-link> 
             </button>
           </form>
         </div>
@@ -76,7 +76,7 @@ export default {
         .then(function () {
           console.log("Uspješna registracija!");
 
-          this.$router.replace({name: "Postojeći korisnik"});
+          this.$router.replace({name: "Postojeci_korisnik"});
         })
       console.log("Nastavak...");
     },
