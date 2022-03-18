@@ -8,44 +8,44 @@
       <form class="row g-3">
   <div class="col-md-6">
     <label for="naslovKnjige" class="form-label">Naslov</label>
-    <input type="text" class="form-control" id="" placeholder="Ime knjige">
+    <input v-model="naslov" type="text" class="form-control" id="" placeholder="Ime knjige">
   </div>
   <div class="col-md-6">
     <label for="imeAutora" class="form-label">Autor</label>
-    <input type="text" class="form-control" id="" placeholder="Ime i prezime autora">
+    <input v-model="autor" type="text" class="form-control" id="" placeholder="Ime i prezime autora">
   </div>
   <div class="col-12">
     <label for="kratkiSadrzaj" class="form-label">Sadržaj knjige</label>
-    <input type="text" class="form-control" id="" placeholder="Kratki opis ili sadržaj knjige">
+    <input v-model="sadrzaj" type="text" class="form-control" id="" placeholder="Kratki opis ili sadržaj knjige">
   </div>
   <div class="col-12">
     <label for="poveznica" class="form-label">Poveznica za online čitanje/kupovinu</label>
-    <input type="link" class="form-control" id="" placeholder="Poveznica na online čitanje ili online kupovinu knjige">
+    <input v-model="link" type="link" class="form-control" id="" placeholder="Poveznica na online čitanje ili online kupovinu knjige">
   </div>
   <div class="col-md-6">
     <label for="Nakladnik" class="form-label">Nakladnik</label>
-    <input type="text" class="form-control" id="" placeholder="Nakladnik knjige u RH">
+    <input v-model="nakladnik" type="text" class="form-control" id="" placeholder="Nakladnik knjige u RH">
   </div>
   <div class="col-md-4">
     <label for="zanr" class="form-label">Žanr</label>
-    <select id="" class="form-select">
+    <select v-model="zanr" id="" class="form-select">
       <option selected>Žanr</option>
-      <option>Drama</option>
-      <option>Znanstvena fantastika</option>
-      <option>Ljubavni roman</option>
-      <option>Dječja književnost</option>
-      <option>Lektire</option>
+      <option value="Drama">Drama</option>
+      <option value="Znanstvena fantastika">Znanstvena fantastika</option>
+      <option value="Ljubavni roman">Ljubavni roman</option>
+      <option value="Dječja književnost">Dječja književnost</option>
+      <option value="Lektire">Lektire</option>
     </select>
   </div>
   <div class="col-md-2">
     <label for="brstranica" class="form-label">Broj stranica</label>
-    <input type="number" class="form-control" id="">
+    <input v-model="broj_stranica" type="number" class="form-control" id="">
   </div>
   <div class="col-12">
   </div>
   <div class="col-12">
     <button type="button" class="btn btn-lg">Dodaj više podataka</button>
-    <button type="button" class="btn btn-lg">Dodaj knjigu u bazu</button>
+    <button v-on:click="dodaj_knjigu" type="button" class="btn btn-lg">Dodaj knjigu u bazu</button>
   </div>
 </form>
       <img src="@/assets/books2.jpg" class="img-fluid" />
@@ -54,8 +54,41 @@
 </template>
 
 <script>
+import {firebase} from "@/firebase.js"
 export default {
   name: "Dodaj",
+
+data: function() {
+    return {
+      broj_stranica:0,
+      zanr:"",
+      naslov:"",
+      autor:"",
+      nakladnik:"",
+      link:"",
+      sadrzaj:""
+            }
+  },
+ 
+  methods: {
+dodaj_knjigu: function () {
+  
+  const nova_knjiga = {
+naslov:this.naslov,
+zanr:this.zanr,
+autor:this.autor,
+link:this.link,
+nakladnik:this.nakladnik,
+broj_stranica:this.broj_stranica,
+sadrzaj_knjige:this.sadrzaj
+
+  }
+  console.log(nova_knjiga)
+
+  firebase.firestore().collection('knjiga').add(nova_knjiga)
+  alert("Knjiga dodana u bazu")
+  }
+  }
 };
 </script>
 
@@ -68,14 +101,14 @@ export default {
 }
 button {
   margin: 4px;
-  width: 40%;
+  width: auto;
   border-radius: 20px;
   padding: 1% 5%;
   background-color: rgb(231, 180, 69);
   font-size: 130%;
   margin: 5%;
   color: black;
-  align-content: center;
+  align-content: left;
 }
 .divider {
   width: 150px;
@@ -87,7 +120,7 @@ button:hover {
 h1 {
   text-align: center;
   font-family: "Times New Roman";
-  font-size: 100px;
+  font-size: auto;
   color: black;
 }
 h2 {
