@@ -7,24 +7,24 @@
       <h1>Pretraga knjige</h1>
       </div>
     <div>   <!-- možda izmjeniti row i col jer mi je ovo too much široko preko cijele stranice, ne znam -->
-        <select v-model="zanr" class="form-select" aria-label="Odaberi zanr">
+        <select v-model="zanr" class="col align-self-center" aria-label="Odaberi zanr">
   <option selected>Odaberi zanr</option>
   <option value="Lektira">Lektira</option>
   <option value="Kriminalistika">Kriminalistika</option>
   <option value="Putopis">Putopis</option>
   
 </select>
-<div class="input-group mb-3">
-  <input v-model="naslov" type="text" class="form-control" placeholder="Upisi naslov" aria-label="Username">
+<div class= ".col-md-">
+  <input v-model="naslov" type="text" class="col align-self-center" placeholder="Upisi naslov" aria-label="Username">
 </div>
-<div class="input-group mb-3">
-  <input v-model="autor" type="text" class="form-control" placeholder="Upisi autora" aria-label="Username">
+<div class=".col-md-">
+  <input v-model="autor" type="text" class="col align-self-center" placeholder="Upisi autora" aria-label="Username">
 </div>
     </div>
     
    
 
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <div class="row align-items-center">
     <div class="button">
         <router-link to="/Dodaj_knjigu"
           ><button class="btn btn primary">
@@ -102,15 +102,15 @@ a{
   font-size: 20px;
 }
 button {
-    margin: 4px;
-    width: 50%;
+    margin: 20px;
+    width: 20%;
     border-radius: 5px;
-    padding: 1% 5%;
+    padding: 1% 2%;
     background-color:rgb(231, 180, 69);
     font-size: 100%;
     margin: 5%;
     color: black;
-    align-content: center;
+    align-content: left;
     position: center;
 }
 button:hover {
