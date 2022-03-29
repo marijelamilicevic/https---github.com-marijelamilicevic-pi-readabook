@@ -1,24 +1,26 @@
 <template>
-  <!-- ovdje nemre biti "glavnipregled" jer je stranica Pretrage, i dolje u style dijelu treba promijeniti-->
+  
 <div class="pretraga"> 
     <div>
       <img src="@/assets/books.jpg" class="img-fluid">    <!-- ovo moramo dogovoriti kako ćemo urediti -->
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
       <h1>Pretraga knjige</h1>
       </div>
-    <div>   <!-- možda izmjeniti row i col jer mi je ovo too much široko preko cijele stranice, ne znam -->
-        <select v-model="zanr" class="col align-self-center" aria-label="Odaberi zanr">
-  <option selected>Odaberi zanr</option>
-  <option value="Lektira">Lektira</option>
-  <option value="Kriminalistika">Kriminalistika</option>
-  <option value="Putopis">Putopis</option>
-  
+    <div>   
+       
+  <select v-model="zanr" class="col align-self-center" placeholder="Odaberi zanr" aria-label= "Username">
+  <option selected>Odaberi žanr</option>
+      <option value="Drama">Drama</option>
+      <option value="Znanstvena fantastika">Znanstvena fantastika</option>
+      <option value="Ljubavni roman">Ljubavni roman</option>
+      <option value="Dječja književnost">Dječja književnost</option>
+      <option value="Lektire">Lektire</option>
 </select>
 <div class= ".col-md-">
-  <input v-model="naslov" type="text" class="col align-self-center" placeholder="Upisi naslov" aria-label="Username">
+  <input v-model="naslov" type="text" class="col align-self-center" placeholder="Upiši naslov" aria-label="Username">
 </div>
 <div class=".col-md-">
-  <input v-model="autor" type="text" class="col align-self-center" placeholder="Upisi autora" aria-label="Username">
+  <input v-model="autor" type="text" class="col align-self-center" placeholder="Upiši autora" aria-label="Username">
 </div>
     </div>
     
@@ -34,7 +36,7 @@
         <router-link :to="{name: 'Rezultati', params: {naslov: naslov, autor: autor, zanr: zanr} }"
           ><button class="btn btn primary">
 
-            <strong>Pretraži</strong>   <!-- nemaš path niti stranicu Rezultati, ne znam jesi planirao to raditi kao zasebnu stranicu ili? ako da, onda ju treba dodati u index.html i isto je urediti kao zasebni Rezultati.vue da izbacuje samo rezultate -->
+            <strong>Pretraži</strong>   
  
           </button></router-link
         >

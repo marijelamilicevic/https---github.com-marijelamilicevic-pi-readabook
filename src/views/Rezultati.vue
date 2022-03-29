@@ -1,19 +1,36 @@
 <template>
 
 <div>
-  <img src="@/assets/books.jpg" class="img-fluid">    
-      np
+  <img src="@/assets/books.jpg" class="img-fluid" />    
+    
       <h1>Rezultati</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Naslov</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Žanr</th>
+      <th scope="col">Broj stranica</th>
+      <th scope="col">Nakladnik</th>
+      <th scope="col">Link</th>
+      </tr>
 
+      
+      </thead>
+        <tbody>
+    <tr v-for="k in knjige" :key="k.naslov">  
+      <td>{{k.naslov}}</td>
+      <td>{{k.autor}}</td>
+      <td>{{k.zanr}}</td>
+      <td>{{k.broj_stranica}}</td>
+      <td>{{k.nakladnik}}</td>
+      <td>{{k.link}}</td>
+    </tr>
+   
+  </tbody>
+      </table>
   <div>
-    {{ $route.params.naslov }}
-{{knjiga}}
 
-    <ul id="example-1">
-  <li v-for="k in knjiga" :key="k.naslov">
-    {{ k.naslov }} - {{k.autor}}
-  </li>
-</ul>
   </div>
   </div>
 </template>
@@ -25,7 +42,7 @@ export default {
   name: "Rezultati",
   data: function() {
     return {
-      knjiga:[]
+      knjige:[]
       }
   },
  
@@ -39,7 +56,7 @@ export default {
 
           const documents = querySnapshot.docs.map(doc => doc.data())
           console.log(documents)
-          this.knjiga = documents
+          this.knjige = documents
         
         })
     }
