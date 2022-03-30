@@ -63,11 +63,11 @@ Zaduženja po članovima tima:
 
         - prototip
         
-        - baza podataka i spajanje s bazom
+        - mogućnost komentiranja i ocjenjivanje knjiga
         
-        - uređivanje stranica i dizajn
-
-        - dokumentacija 
+        - kodiranje (dodavanje dodatnih informacija o knjigama)
+        
+        - dokumentacija (naknadni rad na aplikaciji s obzirom da kolegica nije išla na isti rok)
 
 
         3. TOMISLAV PERCAN 
@@ -75,6 +75,8 @@ Zaduženja po članovima tima:
         - prototip
 
         - baza podataka i spajanje s bazom
+        
+        - kodiranje (pretraga baze knjige + dodavanje nove knjige)
         
         - uređivanje stranica i dizajn
         
