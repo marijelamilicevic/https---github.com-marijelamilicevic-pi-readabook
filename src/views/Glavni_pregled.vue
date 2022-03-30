@@ -7,26 +7,6 @@
       <h3>Čitanje je jedna od najdražih aktivnosti svih knjiških moljaca. Čitanje može biti gušt, 
         čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. </h3>
       </div>
-      <!--
-    <div class="card" style="max-width: 535px">
-      <div class="row g-0">
-        <div class="col-md-4">
-      <img src="@/assets/HP1.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Harry Potter i Kamen mudraca Autor: J.K. Rowling</h5>
-        <p class="card-text">Roditelji Harryja Pottera stradali su dok je još bio jednogodišnja beba. 
-          Deset je dugih i neveselih ljeta Harry proveo kao neželjen gost pod krovom Dursleyjevih, 
-          pod grdnjom navijek ljute tete Petunije...</p>
-         <button type="button" class="btn btn-lg">Više o knjizi</button>
-      </div>
-    </div>
-  </div>
-    </div>
-    -->
-
-
 <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col" v-for="k in knjige" :key="k.naslov">
     <div class="card">

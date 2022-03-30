@@ -1,5 +1,6 @@
 <template>
-
+<div class="rezultati"> 
+  <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
 <div>
   <img src="@/assets/books.jpg" class="img-fluid" />    
     
@@ -14,8 +15,6 @@
       <th scope="col">Nakladnik</th>
       <th scope="col">Link</th>
       </tr>
-
-      
       </thead>
         <tbody>
     <tr v-for="k in knjige" :key="k.naslov">  
@@ -30,7 +29,7 @@
   </tbody>
       </table>
   <div>
-
+  </div>
   </div>
   </div>
 </template>
