@@ -7,6 +7,7 @@
       <h3>Čitanje je jedna od najdražih aktivnosti svih knjiških moljaca. Čitanje može biti gušt, 
         čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. </h3>
       </div>
+      <!--
     <div class="card" style="max-width: 535px">
       <div class="row g-0">
         <div class="col-md-4">
@@ -23,6 +24,23 @@
     </div>
   </div>
     </div>
+    -->
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" v-for="k in knjige" :key="k.naslov">
+    <div class="card">
+      <img src="@/assets/knjiga.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{k.naslov}} </h5>
+        <p class="card-text">{{k.autor}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <div class="button">
         <router-link to="/Dodaj_knjigu"
@@ -48,6 +66,9 @@ import { firebase } from "@/firebase.js";
 
 export default {
   data: function () {
+    return {
+      knjige:[]
+      }
   },
 
   methods: {
@@ -57,7 +78,25 @@ export default {
       });
     this.$router.replace({name: "Home"});
     },
+    
+    dohvati: function() {
+   
+      firebase.firestore().collection('knjiga')
+        .get()
+        .then(querySnapshot => {
+
+          const documents = querySnapshot.docs.map(doc => doc.data())
+          console.log(documents)
+          this.knjige = documents
+        
+        })
+    }
+
   },
+  mounted(){
+    this.dohvati()
+
+  }
 };
 </script>
 

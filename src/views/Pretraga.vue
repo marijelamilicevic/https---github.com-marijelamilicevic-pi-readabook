@@ -6,42 +6,45 @@
       <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
       <h1>Pretraga knjige</h1>
       </div>
-    <div>   
-       
-  <select v-model="zanr" class="col align-self-center" placeholder="Odaberi zanr" aria-label= "Username">
-  <option selected>Odaberi žanr</option>
-      <option value="Drama">Drama</option>
-      <option value="Znanstvena fantastika">Znanstvena fantastika</option>
-      <option value="Ljubavni roman">Ljubavni roman</option>
-      <option value="Dječja književnost">Dječja književnost</option>
-      <option value="Lektire">Lektire</option>
-</select>
-<div class= ".col-md-">
-  <input v-model="naslov" type="text" class="col align-self-center" placeholder="Upiši naslov" aria-label="Username">
-</div>
-<div class=".col-md-">
-  <input v-model="autor" type="text" class="col align-self-center" placeholder="Upiši autora" aria-label="Username">
-</div>
+    
+    
+    <div style="width:50%;margin:0 auto;">   
+        <select v-model="zanr" class="form-control" placeholder="Odaberi zanr" aria-label= "Username">
+        
+            <option value="Drama">Drama</option>
+            <option value="Znanstvena fantastika">Znanstvena fantastika</option>
+            <option value="Ljubavni roman">Ljubavni roman</option>
+            <option value="Dječja književnost">Dječja književnost</option>
+            <option value="Lektire">Lektire</option>
+      </select>
+      <div class= "input-group mb-3">
+        <input v-model="naslov" type="text" class="form-control" placeholder="Upiši naslov" aria-label="Username">
+      </div>
+      <div class="input-group mb-3">
+        <input v-model="autor" type="text" class="form-control" placeholder="Upiši autora" aria-label="Username">
+    </div>
+
+          <div class="row align-items-center">
+        <div class="button">
+            <router-link to="/Dodaj_knjigu"
+              ><button class="btn btn primary">
+                <strong>Dodaj knjigu u bazu</strong>
+              </button></router-link
+            >
+            <router-link :to="{name: 'Rezultati', params: {naslov: naslov, autor: autor, zanr: zanr} }"
+              ><button class="btn btn primary">
+
+                <strong>Pretraži</strong>   
+    
+              </button></router-link
+                >
+              </div>
+        </div>
     </div>
     
    
 
-    <div class="row align-items-center">
-    <div class="button">
-        <router-link to="/Dodaj_knjigu"
-          ><button class="btn btn primary">
-            <strong>Dodaj knjigu u bazu</strong>
-          </button></router-link
-        >
-        <router-link :to="{name: 'Rezultati', params: {naslov: naslov, autor: autor, zanr: zanr} }"
-          ><button class="btn btn primary">
-
-            <strong>Pretraži</strong>   
- 
-          </button></router-link
-        >
-      </div>
-</div>
+    
 <img src="@/assets/books2.jpg" class="img-fluid" />
  </div>
 </template>
@@ -105,7 +108,7 @@ a{
 }
 button {
     margin: 20px;
-    width: 20%;
+    width: 40%;
     border-radius: 5px;
     padding: 1% 2%;
     background-color:rgb(231, 180, 69);

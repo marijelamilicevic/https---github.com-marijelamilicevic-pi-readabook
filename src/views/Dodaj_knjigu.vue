@@ -87,6 +87,7 @@ sadrzaj_knjige:this.sadrzaj
 
   firebase.firestore().collection('knjiga').add(nova_knjiga)
   alert("Knjiga dodana u bazu")
+  this.$router.push({ name: 'Glavni pregled' })
   }
   }
 };
