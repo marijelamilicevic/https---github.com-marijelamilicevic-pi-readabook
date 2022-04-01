@@ -2,8 +2,10 @@
   <div class="dodaj">
     <div>
       <img src="@/assets/books.jpg" class="img-fluid" />
+       <a href="#" @click="odjava()">Odjava</a> 
       <h1>Read a book</h1>
       <h3> „Toliko knjiga, a tako malo vremena.” – Frank Zappa</h3>
+      <div class="divider"></div>
       <h2>Preko forme i traženih podataka dodaj knjigu u bazu.</h2>
       <form class="row g-3">
   <div class="col-md-6">
@@ -44,11 +46,13 @@
   <div class="col-12">
   </div>
   <div class="col-12">
-    <button type="button" class="btn btn-lg">Dodaj više podataka</button>
-    <button v-on:click="dodaj_knjigu" type="button" class="btn btn-lg">Dodaj knjigu u bazu</button>
+    <h4>Opcionalno, možeš dodati više podataka o knjizi</h4>
+    <button type="button" class="btn btn primary">Dodaj više podataka</button>
+    <button v-on:click="dodaj_knjigu" type="button" class="btn btn primary"><strong>Dodaj knjigu u bazu</strong></button>
   </div>
 </form>
       <img src="@/assets/books2.jpg" class="img-fluid" />
+      <h5>© Read a book 2022</h5>
     </div>
   </div>
 </template>
@@ -101,22 +105,14 @@ sadrzaj_knjige:this.sadrzaj
   background-attachment: fixed;
 }
 button {
-  margin: 4px;
-  width: auto;
-  border-radius: 20px;
-  padding: 1% 5%;
-  background-color: rgb(231, 180, 69);
-  font-size: 130%;
-  margin: 5%;
-  color: black;
-  align-content: left;
-}
-.divider {
-  width: 150px;
-  display: inline-block;
-}
-button:hover {
-  box-shadow: 9px 9px 7px black;
+    margin: 4px;
+    border-radius: 5px;
+    background-color:rgb(231, 180, 69);
+    margin: 5%;
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-style: bold;
 }
 h1 {
   text-align: center;
@@ -128,7 +124,7 @@ h2 {
   text-align: left;
   font-style:normal;
   font-family: "Times New Roman";
-  font-size: 20px;
+  font-size: 15px;
   color: black;
 }
 h3 {
@@ -136,6 +132,31 @@ h3 {
   font-style: italic;
   font-family: "Times New Roman";
   font-size: 20px;
+  color: black;
+}
+h4{
+  color: black;
+  text-align: left;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+}
+h5{
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 10px;
+  font-style: italic;
+}
+a{
+  color: black;
+  font-size: 15px;
+  text-align: right;
+  font-style: bold;
+  font-family: 'Times New Roman';
+}
+.form-label{
+  text-align: right;
+  font-family: 'Times New Roman';
   color: black;
 }
 </style>

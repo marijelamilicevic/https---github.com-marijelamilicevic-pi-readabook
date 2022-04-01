@@ -8,15 +8,16 @@
       </div>
     
     
-    <div style="width:50%;margin:0 auto;">   
+    <div style="width:50%; margin:0 auto;">   
+        <h2>Odaberi žanr za pretragu</h2>
         <select v-model="zanr" class="form-control" placeholder="Odaberi zanr" aria-label= "Username">
-        
             <option value="Drama">Drama</option>
             <option value="Znanstvena fantastika">Znanstvena fantastika</option>
             <option value="Ljubavni roman">Ljubavni roman</option>
             <option value="Dječja književnost">Dječja književnost</option>
             <option value="Lektire">Lektire</option>
       </select>
+ <div class="divider"></div>
       <div class= "input-group mb-3">
         <input v-model="naslov" type="text" class="form-control" placeholder="Upiši naslov" aria-label="Username">
       </div>
@@ -89,6 +90,12 @@ h1 {
   font-size: 100px;
   color: black;
 }
+h2{
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 17px;
+}
 h3 {
   text-align: center;
   font-style: italic;
@@ -120,5 +127,8 @@ button {
 }
 button:hover {
   box-shadow: 9px 9px 7px black;
+}
+.divider{
+    height: 25px;
 }
 </style>

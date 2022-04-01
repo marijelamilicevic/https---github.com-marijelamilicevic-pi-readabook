@@ -2,7 +2,7 @@
  <div class="glavnipregled">
     <div>
       <img src="@/assets/books.jpg" class="img-fluid">
-      <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
+      <a href="#" @click="odjava()">Odjava</a> 
       <h1>Read a book</h1>
       <h3>Čitanje je jedna od najdražih aktivnosti svih knjiških moljaca. Čitanje može biti gušt, 
         čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. </h3>
@@ -36,6 +36,7 @@
       </div>
 </div>
 <img src="@/assets/books2.jpg" class="img-fluid" />
+<h4>© Read a book 2022</h4>
  </div>
 </template>
 
@@ -100,27 +101,26 @@ h3 {
   font-size: 20px;
   color: black;
 }
-p{
+h4{
   color: black;
-  text-align: right;
+  text-align: center;
   font-family: 'Times New Roman';
-  position: right;
+  font-size: 10px;
+  font-style: italic;
 }
 a{
   color: black;
-  font-size: 20px;
+  font-size: 15px;
+  text-align: right;
+  font-style: bold;
+  font-family: 'Times New Roman';
 }
 button {
     margin: 4px;
-    width: 50%;
     border-radius: 5px;
-    padding: 1% 5%;
     background-color:rgb(231, 180, 69);
-    font-size: 100%;
     margin: 5%;
     color: black;
-    align-content: center;
-    position: center;
 }
 button:hover {
   box-shadow: 9px 9px 7px black;
