@@ -45,7 +45,7 @@
               @click="novikorisnik()"
               class="btn btn-lg btn-lg"
             >Registriraj se!
-            <router-link to="/Glavni_pregled"></router-link> 
+            <router-link to="Glavni_pregled"></router-link> 
             </button>
           </form>
         </div>
@@ -73,11 +73,16 @@ export default {
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.email, this.lozinka)
-        .then(function () {
+        .then(() => {
           console.log("Uspješna registracija!");
+          alert("Uspješna registracija!")
+          this.$router.replace({name: "Postojeći korisnik"});
 
-          this.$router.replace({name: "Postojeci_korisnik"});
         })
+        .catch (function (err) {
+        console.error("Greška!", err) 
+        alert (err.message)
+      })
       console.log("Nastavak...");
     },
   },

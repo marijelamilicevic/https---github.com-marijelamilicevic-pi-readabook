@@ -8,7 +8,7 @@
         čitanjem možemo naučiti puno, čitanje nas vodi u druge svjetove, čitanjem postajemo bolji ljudi. </h3>
       </div>
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col" v-for="k in knjige" :key="k.naslov">
+  <div class="col" v-for="k in knjige" :key="k.id">
     <div class="card">
       <img src="@/assets/knjiga.jpg" class="card-img-top" alt="...">
       <div class="card-body">

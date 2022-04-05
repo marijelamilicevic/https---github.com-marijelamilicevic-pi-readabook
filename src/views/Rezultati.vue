@@ -58,8 +58,13 @@ export default {
           this.knjige = documents
         
         })
-    }
-
+    },
+odjava: function () {
+        firebase
+        .auth().signOut().then(() => {
+      });
+    this.$router.replace({name: "Home"});
+    },
   },
   mounted(){
     this.dohvati()

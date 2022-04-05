@@ -66,10 +66,11 @@ export default {
       .then((result) => {
         console.log("Uspješna prijava!", result);
        
-       this.$router.replace({name: "Glavni_pregled"});
+       this.$router.replace({name: "Glavni pregled"});
       })
       .catch (function (err) {
-        console.error("Greška!", err)
+        console.error("Greška!", err) 
+        alert (err.message)
       });
     },
   },
