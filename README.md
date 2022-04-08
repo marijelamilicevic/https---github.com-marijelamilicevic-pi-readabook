@@ -1,3 +1,5 @@
+LINK NA APLIKACIJU: https://624fdd5d3950593bf92ddefe--melodic-pastelito-f983c0.netlify.app/#
+
 Naziv aplikacije: READ A BOOK
 
 Sastav: 
