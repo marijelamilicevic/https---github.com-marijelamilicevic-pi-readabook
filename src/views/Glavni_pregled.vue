@@ -13,7 +13,12 @@
       <img src="@/assets/knjiga.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{k.naslov}} </h5>
-        <p class="card-text">{{k.autor}}</p>
+        <p class="card-text">Autor: {{k.autor}}</p>
+        <p class="card-text">Sadržaj knjige: {{k.sadrzaj_knjige}}</p>
+        <p class="card-text">Žanr: {{k.zanr}}</p>
+        <p class="card-text">Nakladnik: {{k.nakladnik}}</p>
+        <p class="card-text">Broj stranica: {{k.broj_stranica}}</p>
+        <p class="card-text">Poveznica na knjigu: {{k.link}}</p>
       </div>
     </div>
   </div>

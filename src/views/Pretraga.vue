@@ -3,7 +3,7 @@
 <div class="pretraga"> 
     <div>
       <img src="@/assets/books.jpg" class="img-fluid">    <!-- ovo moramo dogovoriti kako ćemo urediti -->
-      <p><a href="#" @click="odjava()">Izlazak iz aplikacije</a></p> 
+      <a href="#" @click="odjava()">Odjava</a> 
       <h1>Pretraga knjige</h1>
       </div>
     
@@ -41,12 +41,9 @@
                 >
               </div>
         </div>
-    </div>
-    
-   
-
-    
+    </div>  
 <img src="@/assets/books2.jpg" class="img-fluid" />
+<h5>© Read a book 2022</h5>
  </div>
 </template>
 
@@ -103,15 +100,12 @@ h3 {
   font-size: 20px;
   color: black;
 }
-p{
-  color: black;
-  text-align: right;
-  font-family: 'Times New Roman';
-  position: right;
-}
 a{
   color: black;
-  font-size: 20px;
+  font-size: 15px;
+  text-align: right;
+  font-style: bold;
+  font-family: 'Times New Roman';
 }
 button {
     margin: 20px;
@@ -130,5 +124,12 @@ button:hover {
 }
 .divider{
     height: 25px;
+}
+h5{
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 10px;
+  font-style: italic;
 }
 </style>
